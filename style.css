@@ -1,0 +1,43 @@
+body{
+    background-image: url("donate.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.page-title {
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+}
+.container-fluid{
+    float: right;
+    left: 60%;
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+.form submit{
+    font-family: 'Times New Roman', Times, serif;
+    background: #4caf50;
+    color: #ffffff
+}
+.center{
+    float: center;
+}
+.button {
+
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+  
+ 
+   
