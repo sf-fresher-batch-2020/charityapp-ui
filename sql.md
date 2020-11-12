@@ -1,8 +1,11 @@
 /*--CREATE DATABASE--*/
+
+
 create database test_db;
 use test_db;
 
 /*--CREATE TABLE FOR USERS--*/
+
 
 create table users  
 (
@@ -20,14 +23,21 @@ constraint age_ck check(age > 0 and age < 100)
 
 
 /*---Load Sample Data--*/
+
+
+
 insert into users (name,email,password,number,age) values ( 'Naresh','naresh@gmail.com', 'pass123', 9677845420,30);
 insert into users (name,email,password,number,age) values ( 'siva','siva@gmail.com', 'pass123', 9677845421,31);
 insert into users (name,email,password,number,age) values ( 'priya','priya@gmail.com', 'pass123', 9655698971,21);
 
 /*---List All Users--*/
+
+
 select * from users;
 
 /*---TO ADD REQUESTS--*/
+
+
 
  create table request
 ( 
@@ -39,15 +49,19 @@ created_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 /*---Load Sample Data--*/
 
+
+
 insert into request (category,Amount) values ( 'Food',25000);
 insert into request (category,Amount) values ( 'Baby Care',25000);
 insert into request (category,Amount) values ( 'Health Care',25000);
 
 /*---List All REQUESTS--*/
+
  
  select * from request;
  
  /*--Creating Donation Table--*/
+ 
  
  create table donation
 (
@@ -60,6 +74,7 @@ foreign key (user_id) references users(id)
 
 /*---Load Sample Data--*/
 
+
 insert into donation (user_id,category,Amount) values ( 1,'Food',5000);
 insert into donation (user_id,category,Amount) values ( 1,'Baby Care',5000);
 insert into donation (user_id,category,Amount) values ( 1,'Health Care',5000);
@@ -67,6 +82,8 @@ insert into donation (user_id,category,Amount) values ( 1,'Health Care',5000);
 select * from donation;
 
 /*---Load Sample Data--*/
+
+
 create table donors_list 
 (
 user_id int,
@@ -80,6 +97,7 @@ foreign key (user_id) references users(id)
 
 /*---Load Sample Data--*/
 
+
 insert into donors_list (user_id,name,request_id,category,Amount_donated) values ( 1,'ramesh',1,'Food',5000);
 insert into donors_list (user_id,name,request_id,category,Amount_donated) values ( 3,'priya',1,'Food',4000);
 insert into donors_list (user_id,name,request_id,category,Amount_donated) values ( 1,'ramesh',3,'Health Care',1000);
@@ -87,9 +105,13 @@ insert into donors_list (user_id,name,request_id,category,Amount_donated) values
 select * from donors_list;
 
 /*--Filtering to know the amount donated to category--*/
+
+
 select * from donors_list where category="Food";
 
 /*--Filtering to know the specific user donation--*/
+
+
 select * from donors_list where name="priya";
  
 
