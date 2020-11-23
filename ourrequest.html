@@ -97,7 +97,7 @@ body {
             }  
           }
             function deleteRecord(id) {
-              console.log("Going to delete");
+              alert("Do you want to delete it");
               console.log(id);
               let list = new ListService().list();
               let index = list.findIndex ( obj=>obj.reqid == id);
