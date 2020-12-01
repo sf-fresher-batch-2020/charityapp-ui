@@ -45,15 +45,15 @@
                 <a class="nav-link" href="" data-loggedin=true style="display: block;">Welcome </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="" onclick="logout()" data-loggedin=true>(Logout) </a>
+                <a class="nav-link" href="donorlogin.html" onclick="logout()" data-loggedin=true>(Logout) </a>
             </li>
         </ul>
         
     </div>
 </nav>
 <script>
-var user = JSON.parse(localStorage.getItem("USERS"));
-console.log("USERS", user);
+var user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
+console.log("LOGGED_IN_USER", user);
 if(user){
     console.log("User is logged in");
     // Hide menus which has data-loggedin=false
